@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta content='width=1024, user-scalable=no' name='viewport'>
+    <!-- deck.js's core css -->
+    <link href="deck.js/core/deck.core.css" rel="stylesheet" type="text/css"/>
+    <!-- deck.js extension CSS files -->
+    <link href="deck.js/extensions/codemirror/deck.codemirror.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/goto/deck.goto.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/hash/deck.hash.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/menu/deck.menu.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/navigation/deck.navigation.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/scale/deck.scale.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/status/deck.status.css" rel="stylesheet" type="text/css"/>
+    <!-- all css in the css dir: Keydown CSS, your custom CSS, and themes from deck.js -->
+    <link href="css/keydown.css" rel="stylesheet" type="text/css"/>
+    <link href="css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="css/horizontal-slide.css" rel="stylesheet" type="text/css"/>
+    <link href="css/Source_Code_Mgmt.css" rel="stylesheet" type="text/css"/>
+    <link href="css/swiss.css" rel="stylesheet" type="text/css"/>
+    <!-- Modernizr (provided for legacy browsers) -->
+    <script src="deck.js/support/modernizr.custom.js" type="text/javascript"></script>
+  </head>
+  <body class='deck-container keydown'>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Examples of SCM</h1>
+        
+        <ul>
+        <li>Open: CVS, GIT, SVN (SubVersioN), Mercurial</li>
+        <li>Propriatary: Vault, Perforce</li>
+        <li>Cloud-based services: Github, Beanstalk, SourceSafe (M$ specific), Bitbucket</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Distributed VS Centralized</h1>
+        
+        <ul>
+        <li>Centralized:
+        
+        <ul>
+        <li>CVS, SVN has a centrilized structure</li>
+        <li>You commit to the centralized repo</li>
+        </ul>
+        </li>
+        <li>Distributed:
+        
+        <ul>
+        <li>Git is distributed</li>
+        <li>You can have multiple remotes</li>
+        <li>You can have multiple "forks" (more on "forks" later)</li>
+        <li>You commit locally then "push" that commit to the remote(s)</li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>300 lb gorilla</h1>
+        
+        <ul>
+        <li>https://github.com</li>
+        <li>3 Million + active developers</li>
+        <li>Robust API</li>
+        <li>it just works</li>
+        <li>Site search as well as google search integration for your repo</li>
+        <li>"Sourceforge done right"</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Definitions</h1>
+        
+        <ul>
+        <li>Repository(repo): The place where a versioned project is kept.</li>
+        <li>Working Folder: A local copy of the (usually) remote repository</li>
+        <li>Checkout/Clone: The action of referencing the repo locally so as to make changes</li>
+        <li>Fork: To copy a repo for the purposes of using the code in a different way</li>
+        <li>Pull Request: From the forked repo, request that your changes to the fork be incorporated into the original</li>
+        <li>Master/Trunk: for git repos, every repo has a master. In SVN, it's called a trunk. It's the origin of life for the repo.</li>
+        <li>Branch: slightly different version of the Master with changes that have yet to be approved/used/implemented</li>
+        <li>Merge: Take code in a branch and combined it with the master retaining the pertinent changes</li>
+        <li>Tags: You can tag commits for reference: "v1.0", "prod on april 15", etc</li>
+        <li>Commit hooks: Actions that are performed when commits are checked in or pushed to remote</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Basic Workflow</h1>
+        
+        <ul>
+        <li>copy code to local working folder</li>
+        <li>make changes to working code</li>
+        <li>create a commit of your changes with a description</li>
+        <li>merge your commit back to the remote</li>
+        <li>ABCP: Always be committing &amp; pushing
+        
+        <ul>
+        <li>Teach yourself to enforce good code practices</li>
+        <li>Share as much code as the project allows</li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>More complicated Workflow</h1>
+        
+        <ul>
+        <li>Branch remote for your new feature</li>
+        <li>Clone the branch locally</li>
+        <li>Make changes and check your changes into the branch</li>
+        <li>Real developers never test their code. It's always right the first time</li>
+        <li>push the branch out to remote</li>
+        <li>Build a copy of the project for QA based on the branch</li>
+        <li>Merge the branch into the master</li>
+        <li>Tag the merge-commit as "Version x" to indicate a release.</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Deployment</h1>
+        
+        <ul>
+        <li>for iOS/Android apps not really an issue</li>
+        <li>for webapps, you have a prod, stage, and dev branch</li>
+        <li>each represents the code in your three website environments</li>
+        <li>merge with the dev branch and trigger a dev build with post-commit hook</li>
+        <li>merge dev with stage and trigger post-commit hook</li>
+        <li>merge stage with master and trigger post-commit hook</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>GUI vs Command Line</h1>
+        
+        <ul>
+        <li>Tower.app(git), Gitx(git), Versions(svn), Cornerstone(svn)</li>
+        <li>Real programmers use the command line</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>XCode</h1>
+        
+        <ul>
+        <li>Git/SVN integration is "usable"</li>
+        <li>More robust GUI's available (e.g. Tower.app)</li>
+        <li>Real programmers use the command line</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Student Exercise</h1>
+        
+        <ul>
+        <li>Install GIT on your machine from http://git-scm.com</li>
+        <li>Go to https://github.com and create a user for yourself.</li>
+        <li>Follow the instructions on the created repo to push your first commit out</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Team Exercise</h1>
+        
+        <ul>
+        <li>I will create a Repo with a "student list"</li>
+        <li>Students fork the repo</li>
+        <li>Students update "student list" with their name/email</li>
+        <li>Students create Pull request for me to incorporate their changes</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Takeaway Excercise</h1>
+        
+        <ul>
+        <li>I will incorporate the pull request commits</li>
+        <li>Update your fork with the latest changes from the upstream master</li>
+        </ul>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <!-- deck.js navigation extension -->
+    <a class='deck-prev-link' href='#' title='Previous'>&#8592;</a>
+    <a class='deck-next-link' href='#' title='Next'>&#8594;</a>
+    <!-- deck.js hash extension -->
+    <a class='deck-permalink' href='.' title='Permalink to this slide'>#</a>
+    <!-- deck.js status extension -->
+    <p class='deck-status'>
+      <span class='deck-status-current'></span>
+      /
+      <span class='deck-status-total'></span>
+    </p>
+    <!-- jQuery & deck.js -->
+    <script src="deck.js/support/jquery.1.6.4.min.js" type="text/javascript"></script>
+    <script src="deck.js/core/deck.core.js" type="text/javascript"></script>
+    <!-- deck.js extension JS files -->
+    <script src="deck.js/extensions/codemirror/codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/deck.codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/clike/clike.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/clojure/clojure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/coffeescript/coffeescript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/css/css.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/diff/diff.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/haskell/haskell.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/lua/lua.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/php/php.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/plsql/plsql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/python/python.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/r/r.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/rst/rst.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/ruby/ruby.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/scheme/scheme.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/smalltalk/smalltalk.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/sparql/sparql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/stex/stex.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/velocity/velocity.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/xml/xml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/xmlpure/xmlpure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/yaml/yaml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/goto/deck.goto.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/hash/deck.hash.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/menu/deck.menu.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/navigation/deck.navigation.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/scale/deck.scale.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/status/deck.status.js" type="text/javascript"></script>
+    <!-- your custom JS here, including call to initialize deck.js-codemirror -->
+    <script src="js/Source_Code_Mgmt.js" type="text/javascript"></script>
+    <!-- Initialize the deck. -->
+    <script type='text/javascript'>
+      $(function() { $.deck('.slide'); });
+    </script>
+  </body>
+</html>
