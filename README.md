@@ -3,3 +3,4 @@
 A repo for basic introduction to Git and source control.
 
 Tom Stovall ( stovak [at] gmail.com )
+Princeton Moore ( eyesmoorewise [at] gmail.com )
