@@ -10,3 +10,4 @@ I love this class it's so enlightening.
 We're learning about add, commit and push git commands.
 Princeton Moore ( eyesmoorewise [at] gmail.com )
 Nicholas Magana ( cutsmantheband [at] gmail.com )
+Christopher Lane ( )
