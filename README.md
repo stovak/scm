@@ -6,3 +6,5 @@ Tom Stovall ( stovak [at] gmail.com )
 mirzaian (emilingham [at] gmail.com)
 David Ramirez ( dramir81 [at] smccd.edu )
 Eddie Wood  ( ewood111 [at] yahoo.com )
+I love this class it's so enlightening.
+We're learning about add, commit and push git commands.
