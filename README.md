@@ -12,3 +12,4 @@ Princeton Moore ( eyesmoorewise [at] gmail.com )
 Nicholas Magana ( cutsmantheband [at] gmail.com )
 Christopher Lane ( )
 Cat Mitsunaga (catmits [at] gmail [dot] com)
+Jonathan Silva
