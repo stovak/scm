@@ -14,3 +14,5 @@ Christopher Lane ( )
 Cat Mitsunaga (catmits [at] gmail [dot] com)
 Jonathan Silva
 Willis Liu
+Tom Stovall ( stovak [at] gmail.com ) 
+Jason Berland (jason.berland [at] vevo.com )
