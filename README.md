@@ -17,3 +17,4 @@ Willis Liu
 Tom Stovall ( stovak [at] gmail.com ) 
 Jason Berland (jason.berland [at] vevo.com )
 Derek Yee
+Alain Cousin (acousin01 [at] gmail.com)
